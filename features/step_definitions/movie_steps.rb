@@ -13,8 +13,6 @@ end
 #   on the same page
 
 Then /I should see "(.*)" before "(.*)"/ do |e1, e2|
-  #regexp = Regexp.new("#{e1}.*#{e2}", Regexp::MULTILINE)
-  #assert page.body =~ regexp
   assert_match(/#{e1}.*#{e2}/m, page.body)
 end
 
